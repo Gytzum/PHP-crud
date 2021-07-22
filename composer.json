@@ -12,7 +12,10 @@
         "symfony/cache": "^5.3"
     },
     "autoload": {
-        "files": ["src/models/Product.php"]
+        "files": ["src/models/Admin.php",
+                  "src/models/Employees.php",
+                  "src/models/Projects.php",
+                  "src/models/Contacts.php"]
     }
     
 }
