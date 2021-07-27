@@ -13,16 +13,25 @@ class Employee
      * @ORM\GeneratedValue
      */
     protected $id;
+      /** 
+     * @ORM\Column(type="string")
+     */
+    private $name;
 
-        /**
+      /**
      * Many features have one product. This is the owning side.
-     * @ManyToOne(targetEntity="Project", inversedBy="employees")
-     * @JoinColumn(name="employee_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Project", inversedBy="projects")
+     * @ORM\JoinColumn(name="project_id", referencedColumnName="id")
      */
     private $project;
 
-    // public function getName()
-    // {
-    //     return $this->name;
-    // }
+    public function getEmployeeName()
+    {
+        return $this->name;
+    }
+
+    public function setEmployeeName()
+    {
+        return $this->name;
+    }
 }

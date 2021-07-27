@@ -1,6 +1,7 @@
 <?php
 $request = $_SERVER['REQUEST_URI'];
 
+
 switch ($request) {
     case '/' :
         require __DIR__ . '/src/views/home.php';

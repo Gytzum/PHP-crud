@@ -15,13 +15,28 @@ class Project
      * @ORM\GeneratedValue
      */
     protected $id;
+       /** 
+     * @ORM\Column(type="string") 
+     */
+    protected $name;
+
     /** 
      * @ORM\OneToMany(targetEntity="Employee", mappedBy="project")
      */
-    private $employee;
+    private $employees;
 
     public function __construct() {
-        $this->employee = new ArrayCollection();
+        $this->employees = new ArrayCollection();
+    }
+
+    public function getProjectName()
+    {
+        return $this->name;
+    }
+    
+    public function setProjectName()
+    {
+        return $this->name;
     }
 }
   

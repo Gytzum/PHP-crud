@@ -1,3 +1,3 @@
-im at home
+<?php
+    require_once 'components/header.php' ?>
 
-<a href="projects">aaa</a>
