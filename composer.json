@@ -12,8 +12,10 @@
         "symfony/cache": "^5.3"
     },
     "autoload": {
-        "files": ["src/models/Employee.php",
-                  "src/models/Project.php"]
+        "files": [
+                    "src/models/Employee.php",
+                    "src/models/Project.php"
+                 ]
     },
     "require-dev": {
         "symfony/var-dumper": "^5.3"

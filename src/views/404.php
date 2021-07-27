@@ -13,7 +13,7 @@
       <h1 style="font-size: 40px ;text-transform: uppercase; margin: 0; color: #B3B3B3;">404 error page</h1>
       <img src="/img/404-image.jpg" alt="error 404 image"> //TODO img src pathinfo
       <p style="font-size: 25px;"><b> Uh oh! Page not found...</p>
-      <a href="/" style="display:inline-block; border: 2px solid black; font-size: 18px; text-transform: uppercase; padding: 10px; color:black; background-color: #B3B3B3; text-decoration: none;"><b>back home</a>
+      <a href="/" style="display:inline-block; border: 2px solid black; font-size: 18px; text-transform: uppercase; padding: 10px; color:black; background-color: #B3B3B3; text-decoration: none;"><b>Back Home</a>
     </div>
 </body>
 </html>

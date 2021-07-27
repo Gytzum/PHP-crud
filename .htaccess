@@ -1,5 +1,26 @@
+
+
+#[www/.htaccess] when redirect from / to PHP-SIMPLE-CRUD/
+#... then the local .htaccess picks up
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{REQUEST_FILENAME} !-d
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteRule ^(.+)$ http://localhost/PHP-SIMPLE-CRUD/ [QSA,L]
+#RewriteRule ^(.+)$ http://localhost/PHP-SIMPLE-CRUD/index.php [QSA,L]
+
+#[www/.htaccess] when user is redirected transparently to PHP-SIMPLE-CRUD/ app 
+# ... local .htaccess is not needed and needs to be disabled
+# ... this has the benefit of completelly isolating the applicaiton so we can't access the /views directly
+<IfModule mod_rewrite.c>
 RewriteEngine on
-RewriteCond %{SCRIPT_FILENAME} !-f
-RewriteCond %{SCRIPT_FILENAME} !-d
-RewriteCond %{SCRIPT_FILENAME} !-l
-RewriteRule ^(.*)$ index.php/$1 [QSA,L]
+RewriteCond %{ENV:REDIRECT_STATUS} ^$
+RewriteRule ^(.*)$ PHP-SIMPLE-CRUD/index.php/$1 [L]
+#</IfModule>
+
+#[www/PHP-SIMPLE-CRUD/.htaccess] 
+# RewriteEngine on
+# RewriteCond %{SCRIPT_FILENAME} !-f
+# RewriteCond %{SCRIPT_FILENAME} !-d
+# RewriteCond %{SCRIPT_FILENAME} !-l
+# RewriteRule ^(.*)$ index.php/$1 [QSA,L]

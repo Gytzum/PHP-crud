@@ -1,7 +1,8 @@
 <?php 
 
-use Doctrine\ORM\Mapping as ORM;
-use Doctrine\Common\Collections\ArrayCollection;
+    include_once "bootstrap.php";
+    use Doctrine\ORM\Mapping as ORM;
+    use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -26,17 +27,18 @@ class Project
     private $employees;
 
     public function __construct() {
-        $this->employees = new ArrayCollection();
-    }
+       $this->employees = new ArrayCollection();
+    } 
 
     public function getProjectName()
     {
         return $this->name;
     }
     
-    public function setProjectName()
+    public function setProjectName($name)
     {
-        return $this->name;
+        $this->name = $name;
     }
+
 }
   
