@@ -15,7 +15,7 @@ $config = Setup::createAnnotationMetadataConfiguration(array(__DIR__."/src"), $i
 $conn = array(
     'driver'   => 'pdo_mysql',
     'host'     => '127.0.0.1',
-    'dbname'   => 'cms',
+    'dbname'   => 'oop-crud',
     'user'     => 'root',
     'password' => 'mysql'
 );

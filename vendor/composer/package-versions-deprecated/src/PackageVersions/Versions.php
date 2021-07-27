@@ -62,7 +62,8 @@ final class Versions
   'symfony/service-contracts' => 'v2.4.0@f040a30e04b57fbcc9c6cbcf4dbaa96bd318b9bb',
   'symfony/string' => 'v5.3.3@bd53358e3eccec6a670b5f33ab680d8dbe1d4ae1',
   'symfony/var-exporter' => 'v5.3.3@903c2c0babd6267de5bcb2995e8fc1efb5f01f1f',
-  'gytis/php-simple-cms' => '1.0.0+no-version-set@',
+  'symfony/var-dumper' => 'v5.3.4@a895407f7cf55da42aa1480935d707684b690bfc',
+  'gytis/php-simple-cms' => 'dev-master@abd62b8da0c936953f368000662f0833fbdb5d3b',
 );
 
     private function __construct()

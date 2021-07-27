@@ -15,6 +15,7 @@ return array(
     'Symfony\\Contracts\\Service\\' => array($vendorDir . '/symfony/service-contracts'),
     'Symfony\\Contracts\\Cache\\' => array($vendorDir . '/symfony/cache-contracts'),
     'Symfony\\Component\\VarExporter\\' => array($vendorDir . '/symfony/var-exporter'),
+    'Symfony\\Component\\VarDumper\\' => array($vendorDir . '/symfony/var-dumper'),
     'Symfony\\Component\\String\\' => array($vendorDir . '/symfony/string'),
     'Symfony\\Component\\Console\\' => array($vendorDir . '/symfony/console'),
     'Symfony\\Component\\Cache\\' => array($vendorDir . '/symfony/cache'),

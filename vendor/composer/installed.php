@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => '1.0.0+no-version-set',
-        'version' => '1.0.0.0',
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
         'type' => 'library',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => 'abd62b8da0c936953f368000662f0833fbdb5d3b',
         'name' => 'gytis/php-simple-cms',
         'dev' => true,
     ),
@@ -128,12 +128,12 @@
             'dev_requirement' => false,
         ),
         'gytis/php-simple-cms' => array(
-            'pretty_version' => '1.0.0+no-version-set',
-            'version' => '1.0.0.0',
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
             'type' => 'library',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => 'abd62b8da0c936953f368000662f0833fbdb5d3b',
             'dev_requirement' => false,
         ),
         'ocramius/package-versions' => array(
@@ -300,6 +300,15 @@
             'aliases' => array(),
             'reference' => 'bd53358e3eccec6a670b5f33ab680d8dbe1d4ae1',
             'dev_requirement' => false,
+        ),
+        'symfony/var-dumper' => array(
+            'pretty_version' => 'v5.3.4',
+            'version' => '5.3.4.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/var-dumper',
+            'aliases' => array(),
+            'reference' => 'a895407f7cf55da42aa1480935d707684b690bfc',
+            'dev_requirement' => true,
         ),
         'symfony/var-exporter' => array(
             'pretty_version' => 'v5.3.3',

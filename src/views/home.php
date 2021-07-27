@@ -1,3 +1,3 @@
-<?php
+im at home
 
-print '<h1>HOME</h1><a href="/">home</a> <a href="/contacts">contacts</a> ';
+<a href="projects">aaa</a>

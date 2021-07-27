@@ -1,6 +1,6 @@
 {
     "name": "gytis/php-simple-cms",
-    "description": "This is simple cms app for learning purposes",
+    "description": "This is simple crud app for learning purposes",
     "authors": [
         {
             "name": "Gytzum",
@@ -12,10 +12,10 @@
         "symfony/cache": "^5.3"
     },
     "autoload": {
-        "files": ["src/models/Admin.php",
-                  "src/models/Employees.php",
-                  "src/models/Projects.php",
-                  "src/models/Contacts.php"]
+        "files": ["src/models/Employee.php",
+                  "src/models/Project.php"]
+    },
+    "require-dev": {
+        "symfony/var-dumper": "^5.3"
     }
-    
 }
