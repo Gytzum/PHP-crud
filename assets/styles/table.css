@@ -2,7 +2,9 @@ table{
     width: 80%;
     margin: auto;
     font-size: 30px;
-    text-align: center;
+    text-align: center; 
+
+    box-shadow: 5px 5px 10px black;
 }
 
 table, th, td {

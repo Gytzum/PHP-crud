@@ -12,7 +12,10 @@ use Models\Employee;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-
+<style>
+    <?php include 'assets/styles/create.css';
+     ?>
+</style>
 <?php 
     function redirect_to_root(){
         header("Location: " . parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
@@ -30,18 +33,14 @@ use Models\Employee;
         $entityManager->flush();
         redirect_to_root();
     }
-
     
 ?>
-    
-    <div style=" margin: 30px;">
+    <div style=" margin:30px 30px 30px 200px;">
         <form action="" method="POST">
             <label for="name" style="font-size: 30px;">Create new TODO</label> </br>
             <input type="text" type="text" style="width:300px; height:50px; font-size: 25px" placeholder="Enter name" name="create">
-            <button class="btn" style="cursor: pointer; width:200px; height:50px;" type="submit">Submit</button>
+            <button class="btn"  type="submit">Submit</button>
         </form>
     </div>
-
-
 
 </html>

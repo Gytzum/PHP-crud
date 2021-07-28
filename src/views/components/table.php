@@ -18,22 +18,7 @@ include_once "bootstrap.php";
 <style>
     <?php include 'assets/styles/table.css' ?>
 </style>
-<?php 
-    // Functions
-    // function redirect_to_root(){
-    //     header("Location: " . parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
-    // }
-    // Delete Functionality
-if(isset($_GET['delete'])){
-    if ($_SERVER["REQUEST_URI"] == '/projects'){
-        $table = 'Models\Project';
-    }
-    $record = $entityManager->find($table, $_GET['delete']);
-    $entityManager->remove($record);
-    $entityManager->flush();
-    redirect_to_root();
-}
-?>
+
 <table>
     <thead>
         <tr>
@@ -44,7 +29,6 @@ if(isset($_GET['delete'])){
         </tr>
     </thead>
     <tbody>
-
         <?php
 
         //EMPLOYEES TABLE
@@ -61,7 +45,6 @@ if(isset($_GET['delete'])){
                             <a href=\"?edit={$employee->getId()}\">EDIT</a></td>"
                     . "</tr>");
         }
-
 
         //PROJECTS TABLE
         if ($_SERVER["REQUEST_URI"] == '/projects') {
@@ -85,7 +68,6 @@ if(isset($_GET['delete'])){
                             <a href=\"?edit={$projectId}\">EDIT</a></td>"
                     . "</tr>");
             }
-      
         }
         ?>
     </tbody>
