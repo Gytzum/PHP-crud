@@ -1,6 +1,6 @@
 <?php 
-    include_once "bootstrap.php";
-    use Models\Project;
+    require_once "bootstrap.php";
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,11 +11,10 @@
     <title>Document</title>
 </head>
 <body>
-    <?php require_once 'components/header.php' ;
+<?php   require_once 'components/header.php' ;
          require_once 'components/create.php' ;
     ?>
     
-
 
 </body>
 </html>

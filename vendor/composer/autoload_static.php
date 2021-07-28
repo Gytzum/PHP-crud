@@ -16,8 +16,6 @@ class ComposerStaticInitf6261a5d6230dbe18913fdcca17feab3
         '8825ede83f2f289127722d4e842cf7e8' => __DIR__ . '/..' . '/symfony/polyfill-intl-grapheme/bootstrap.php',
         'e69f7f6ee287b969198c3c9d6777bd38' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/bootstrap.php',
         'b6b991a57620e2fb6b2f66f03fe9ddc2' => __DIR__ . '/..' . '/symfony/string/Resources/functions.php',
-        '96864dfd16ec196bc0ccdd42aa5f8397' => __DIR__ . '/../..' . '/src/models/Employee.php',
-        'ee946abf59de578900ebd532697e639d' => __DIR__ . '/../..' . '/src/models/Project.php',
     );
 
     public static $prefixLengthsPsr4 = array (
@@ -43,6 +41,10 @@ class ComposerStaticInitf6261a5d6230dbe18913fdcca17feab3
             'Psr\\Container\\' => 14,
             'Psr\\Cache\\' => 10,
             'PackageVersions\\' => 16,
+        ),
+        'M' => 
+        array (
+            'Models\\' => 7,
         ),
         'D' => 
         array (
@@ -128,6 +130,10 @@ class ComposerStaticInitf6261a5d6230dbe18913fdcca17feab3
         'PackageVersions\\' => 
         array (
             0 => __DIR__ . '/..' . '/composer/package-versions-deprecated/src/PackageVersions',
+        ),
+        'Models\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src/models',
         ),
         'Doctrine\\Persistence\\' => 
         array (

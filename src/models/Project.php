@@ -1,8 +1,10 @@
 <?php 
-
+    namespace Models;
     include_once "bootstrap.php";
+    
     use Doctrine\ORM\Mapping as ORM;
     use Doctrine\Common\Collections\ArrayCollection;
+    
 
 /**
  * @ORM\Entity
@@ -30,6 +32,10 @@ class Project
        $this->employees = new ArrayCollection();
     } 
 
+    public function getId()
+    {
+        return $this->id;
+    }
     public function getName()
     {
         return $this->name;
