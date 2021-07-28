@@ -16,7 +16,10 @@ switch ($request[0]) {
     case '/projects' :
         require __DIR__ . '/src/views/projects.php';
         break;
-        case '/employees?delete' or  '/projects?delete':
+    case '/employees?delete':
+            require __DIR__ . '/src/views/components/delete.php';
+            break;
+    case '/projects?delete':
             require __DIR__ . '/src/views/components/delete.php';
             break;
     default:
