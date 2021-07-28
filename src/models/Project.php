@@ -30,12 +30,12 @@ class Project
        $this->employees = new ArrayCollection();
     } 
 
-    public function getProjectName()
+    public function getName()
     {
         return $this->name;
     }
     
-    public function setProjectName($name)
+    public function setName($name)
     {
         $this->name = $name;
     }

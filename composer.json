@@ -12,10 +12,9 @@
         "symfony/cache": "^5.3"
     },
     "autoload": {
-        "files": [
-                    "src/models/Employee.php",
-                    "src/models/Project.php"
-                 ]
+        "psr-4": {
+                    "Models\\": "src/models/"
+        }
     },
     "require-dev": {
         "symfony/var-dumper": "^5.3"

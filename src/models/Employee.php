@@ -19,7 +19,7 @@ class Employee
     private $name;
 
       /**
-     * Many features have one product. This is the owning side.
+     * Many employees have one project. This is the owning side.
      * @ORM\ManyToOne(targetEntity="Project", inversedBy="projects")
      * @ORM\JoinColumn(name="project_id", referencedColumnName="id")
      */
