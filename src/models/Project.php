@@ -45,6 +45,14 @@ class Project
     {
         $this->name = $name;
     }
-
+    public function setEmployee($e)
+    {
+        $this->employees = $e;
+    }
+    public function getEmployee()
+    {
+        return $this->employees;
+    }
+    
 }
   

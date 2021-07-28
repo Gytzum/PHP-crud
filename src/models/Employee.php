@@ -39,4 +39,14 @@ class Employee
     {
         return $this->id;
     }
+    public function setProject($p)
+    {
+        $this->project = $p;
+    }
+    public function getProject()
+    {
+        return $this->project;
+    }
+
+ 
 }
