@@ -13,14 +13,27 @@ include_once "bootstrap.php";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"> -->
-
     <title>Document</title>
 </head>
 <style>
     <?php include 'assets/styles/table.css' ?>
 </style>
-
+<?php 
+    // Functions
+    // function redirect_to_root(){
+    //     header("Location: " . parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
+    // }
+    // Delete Functionality
+if(isset($_GET['delete'])){
+    if ($_SERVER["REQUEST_URI"] == '/projects'){
+        $table = 'Models\Project';
+    }
+    $record = $entityManager->find($table, $_GET['delete']);
+    $entityManager->remove($record);
+    $entityManager->flush();
+    redirect_to_root();
+}
+?>
 <table>
     <thead>
         <tr>
@@ -33,9 +46,10 @@ include_once "bootstrap.php";
     <tbody>
 
         <?php
+
         //EMPLOYEES TABLE
         $count = 1;
-        if ($_SERVER["REQUEST_URI"] == '/employees') {
+        if ($_SERVER["REQUEST_URI"] == '/employees' or $_SERVER["REQUEST_URI"] == '/' or $_SERVER["REQUEST_URI"] == '') {
             $employees = $entityManager->getRepository('Models\Employee')->findAll();
             foreach ($employees as $employee)
                 print("<tr>"
@@ -48,27 +62,30 @@ include_once "bootstrap.php";
                     . "</tr>");
         }
 
+
         //PROJECTS TABLE
         if ($_SERVER["REQUEST_URI"] == '/projects') {
             $projects = $entityManager->getRepository('Models\Project')->findAll();
+
             foreach ($projects as $project) {
                 $projectId = $project->getId();
+                $projectName = $project->getName();
+                
                 $name = '';
-                $employees = $entityManager->find('Models\Project',  $projectId)->getEmployee();
-
+                $employees = $entityManager->getRepository('Models\Project')->find($projectId)->getEmployee();
                 foreach ($employees as $employee) {
                     $name .= $employee->getName() . ", ";
                 }
-
                 print("<tr>"
-                        . "<td>" . $count++  . "</td>"
+                        . "<td>" . $count++ . "</td>"
                         . "<td>" . rtrim($name, ', ') . "</td>"
-                        . "<td>" . $project->getName() . "</td>"
+                        . "<td>" . $projectName . "</td>"
                         . "<td>
-                            <a href=\"?delete={$project->getId()}\">DELETE</a>
-                            <a href=\"?edit={$project->getId()}\">EDIT</a></td>"
+                            <a href=\"?delete={$projectId}\">DELETE</a>
+                            <a href=\"?edit={$projectId}\">EDIT</a></td>"
                     . "</tr>");
             }
+      
         }
         ?>
     </tbody>
