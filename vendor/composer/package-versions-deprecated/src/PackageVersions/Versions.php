@@ -23,7 +23,7 @@ final class Versions
      * @deprecated please use {@see self::rootPackageName()} instead.
      *             This constant will be removed in version 2.0.0.
      */
-    const ROOT_PACKAGE_NAME = 'gytis/php-simple-cms';
+    const ROOT_PACKAGE_NAME = 'gytis/php-oop-crud';
 
     /**
      * Array of all available composer packages.
@@ -63,7 +63,7 @@ final class Versions
   'symfony/string' => 'v5.3.3@bd53358e3eccec6a670b5f33ab680d8dbe1d4ae1',
   'symfony/var-exporter' => 'v5.3.3@903c2c0babd6267de5bcb2995e8fc1efb5f01f1f',
   'symfony/var-dumper' => 'v5.3.4@a895407f7cf55da42aa1480935d707684b690bfc',
-  'gytis/php-simple-cms' => 'dev-master@10dc561446b0d87195ffc73fa90ab4d03fe1b492',
+  'gytis/php-oop-crud' => 'dev-master@c15b0459ab371ec448efdd3291c35709c22ed3cd',
 );
 
     private function __construct()

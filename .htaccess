@@ -1,24 +1,24 @@
 
 
-#[www/.htaccess] when redirect from / to PHP-SIMPLE-CMS/
+#[www/.htaccess] when redirect from / to PHP-oop-crud/
 #... then the local .htaccess picks up
 #RewriteEngine On
 #RewriteBase /
 #RewriteCond %{REQUEST_FILENAME} !-d
 #RewriteCond %{REQUEST_FILENAME} !-f
-#RewriteRule ^(.+)$ http://localhost/PHP-SIMPLE-CMS/ [QSA,L]
-#RewriteRule ^(.+)$ http://localhost/PHP-SIMPLE-CMS/index.php [QSA,L]
+#RewriteRule ^(.+)$ http://localhost/PHP-oop-crud/ [QSA,L]
+#RewriteRule ^(.+)$ http://localhost/PHP-oop-crud/index.php [QSA,L]
 
-#[www/.htaccess] when user is redirected transparently to PHP-SIMPLE-CMS/ app 
+#[www/.htaccess] when user is redirected transparently to PHP-oop-crud/ app 
 # ... local .htaccess is not needed and needs to be disabled
 # ... this has the benefit of completelly isolating the applicaiton so we can't access the /views directly
 # <IfModule mod_rewrite.c>
 # RewriteEngine on
 # RewriteCond %{ENV:REDIRECT_STATUS} ^$
-# RewriteRule ^(.*)$ PHP-SIMPLE-CMS/index.php/$1 [L]
+# RewriteRule ^(.*)$ PHP-oop-crud/index.php/$1 [L]
 #</IfModule>
 
-#[www/PHP-SIMPLE-CMS/.htaccess] 
+#[www/PHP-oop-crud/.htaccess] 
 # RewriteEngine on
 # RewriteCond %{SCRIPT_FILENAME} !-f
 # RewriteCond %{SCRIPT_FILENAME} !-d
