@@ -1,5 +1,4 @@
 <?php
-// $request = $_SERVER['REQUEST_URI'];
 $request = explode('=', $_SERVER['REQUEST_URI']);
 
 
@@ -19,6 +18,9 @@ switch ($request[0]) {
     case '/employees?delete':
         require __DIR__ . '/src/views/components/delete.php';
         break;
+        case '/?delete':
+            require __DIR__ . '/src/views/components/delete.php';
+            break;
     case '/projects?delete':
         require __DIR__ . '/src/views/components/delete.php';
         break;

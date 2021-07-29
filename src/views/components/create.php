@@ -2,25 +2,16 @@
 
 use Models\Project;
 use Models\Employee;
-
 include_once "bootstrap.php";
 ?>
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
 <style>
     <?php include 'assets/styles/create.css';
     ?>
 </style>
+
 <?php
-function redirect_to_root()
-{
+function redirect_to_root(){
     header("Location: " . parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
 }
 $table = str_contains($request[0], 'project') ? 'Project' : 'Employee';
@@ -38,6 +29,7 @@ if (isset($_POST['create']) and !empty($_POST['create'])) {
     redirect_to_root();
 }
 
+//Create form
 ?>
 <div style=" margin:30px 30px 30px 200px;">
     <form action="" method="POST">
@@ -46,5 +38,3 @@ if (isset($_POST['create']) and !empty($_POST['create'])) {
         <button class="btn" type="submit">Submit</button>
     </form>
 </div>
-
-</html>

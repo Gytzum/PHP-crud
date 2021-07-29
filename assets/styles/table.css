@@ -1,13 +1,43 @@
 table{
     width: 80%;
     margin: auto;
-    font-size: 30px;
+    font-size:25px;
     text-align: center; 
-
     box-shadow: 5px 5px 10px black;
 }
-
+ thead{
+     background: #dddd;
+ }
+ tbody{
+    background: #ddd;
+ }
+ 
 table, th, td {
     border: 2px solid black;
     border-radius: 3px;
+    padding: 15px;
+    text-align: left;
   }
+  tr:hover {background-color: #f5f5f5;}
+  .btn-del, .btn-edit {
+      font-size: 20px;
+      vertical-align:baseline;
+      text-decoration: none;
+      color: black;
+      padding:0px  15px ;
+      border: 2px solid black;
+      box-shadow: 3px 5px 10px black;
+      border-radius: 5px;
+      margin-left: 5px;
+      transition: 0.2s;
+      }
+  .btn-del{
+      background: rgb(255, 0, 0);
+  }
+  .btn-edit{
+      background: rgb(1, 133, 1);
+  }
+  .btn-del:hover, .btn-edit:hover{
+    vertical-align:top;
+    transition: 0.2s;
+}
