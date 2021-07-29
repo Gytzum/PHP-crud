@@ -26,25 +26,20 @@ class Employee
      */
     private $project;
 
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
 
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
     }
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
-    public function setProject($p)
-    {
+    public function setProject($p) {
         $this->project = $p;
     }
-    public function getProject()
-    {
+    public function getProject() {
         return $this->project;
     }
 

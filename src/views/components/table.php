@@ -30,10 +30,11 @@ include_once "bootstrap.php";
     </thead>
     <tbody>
         <?php
-
+$request = explode('=', $_SERVER['REQUEST_URI']);
         //EMPLOYEES TABLE
         $count = 1;
-        if ($_SERVER["REQUEST_URI"] == '/employees' or $_SERVER["REQUEST_URI"] == '/' or $_SERVER["REQUEST_URI"] == '') {
+        if ($_SERVER["REQUEST_URI"] == '/employees' or $_SERVER["REQUEST_URI"] == '/' or
+            $_SERVER["REQUEST_URI"] == '' or $request[0] == '/employees?edit' or $request[0] == '/?edit' ) {
             $employees = $entityManager->getRepository('Models\Employee')->findAll();
             foreach ($employees as $employee)
                 print("<tr>"
@@ -47,7 +48,7 @@ include_once "bootstrap.php";
         }
 
         //PROJECTS TABLE
-        if ($_SERVER["REQUEST_URI"] == '/projects') {
+        if ($_SERVER["REQUEST_URI"] == '/projects' or $request[0] == '/projects?edit') {
             $projects = $entityManager->getRepository('Models\Project')->findAll();
 
             foreach ($projects as $project) {

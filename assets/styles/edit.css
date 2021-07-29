@@ -1,0 +1,13 @@
+.btn{
+    cursor: pointer; 
+    width:200px; 
+    height:50px; 
+    color:white; 
+    background-color: #00467F;
+    font-size: 30px; 
+    border-radius: 10px;
+}
+.btn:hover{
+    transform: translateY(-5px);
+    transition: 0.2s;
+}

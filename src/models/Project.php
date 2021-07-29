@@ -10,8 +10,7 @@
  * @ORM\Entity
  * @ORM\Table(name="projects")
  */
-class Project
-{
+class Project{
     /** 
      * @ORM\Id
      * @ORM\Column(type="integer")
@@ -32,25 +31,20 @@ class Project
        $this->employees = new ArrayCollection();
     } 
 
-    public function getId()
-    {
+    public function getId() {
         return $this->id;
     }
-    public function getName()
-    {
+    public function getName() {
         return $this->name;
     }
     
-    public function setName($name)
-    {
+    public function setName($name) {
         $this->name = $name;
     }
-    public function setEmployee($e)
-    {
+    public function setEmployee($e) {
         $this->employees = $e;
     }
-    public function getEmployee()
-    {
+    public function getEmployee() {
         return $this->employees;
     }
     
