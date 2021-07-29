@@ -23,7 +23,7 @@ class Project{
     protected $name;
 
     /** 
-     * @ORM\OneToMany(targetEntity="Employee", mappedBy="project")
+     * @ORM\OneToMany(targetEntity="Employee", mappedBy="project" )
      */
     private $employees;
 

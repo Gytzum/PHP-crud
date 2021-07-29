@@ -63,7 +63,7 @@ final class Versions
   'symfony/string' => 'v5.3.3@bd53358e3eccec6a670b5f33ab680d8dbe1d4ae1',
   'symfony/var-exporter' => 'v5.3.3@903c2c0babd6267de5bcb2995e8fc1efb5f01f1f',
   'symfony/var-dumper' => 'v5.3.4@a895407f7cf55da42aa1480935d707684b690bfc',
-  'gytis/php-oop-crud' => 'dev-master@c15b0459ab371ec448efdd3291c35709c22ed3cd',
+  'gytis/php-oop-crud' => 'dev-master@0f79af31b93ea38235e2ca43e0bbea4ce1580d3a',
 );
 
     private function __construct()

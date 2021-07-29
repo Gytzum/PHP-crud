@@ -14,6 +14,7 @@ include_once "bootstrap.php";
 function redirect_to_root(){
     header("Location: " . parse_url($_SERVER["REQUEST_URI"], PHP_URL_PATH));
 }
+$request = explode('=', $_SERVER['REQUEST_URI']);
 $table = str_contains($request[0], 'project') ? 'Project' : 'Employee';
 
 // Add new Project or employee

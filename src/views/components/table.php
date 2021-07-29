@@ -1,7 +1,5 @@
 <?php
 
-use Models\Project;
-use Models\Employee;
 
 include_once "bootstrap.php";
 ?>
@@ -24,10 +22,11 @@ include_once "bootstrap.php";
     $request = explode('=', $_SERVER['REQUEST_URI']);
     //EMPLOYEES TABLE
     $count = 1;
-    if ($_SERVER["REQUEST_URI"] == '/employees' or $_SERVER["REQUEST_URI"] == '/' or
-        $_SERVER["REQUEST_URI"] == '' or $request[0] == '/employees?edit' or $request[0] == '/?edit' ) {
+    $url = $_SERVER['REQUEST_URI'];
+    if ($url == '/employees' or $url == '/' or $url == '' or $request[0] == '/employees?edit' or $request[0] == '/?edit' ) {
         $employees = $entityManager->getRepository('Models\Employee')->findAll();
-        foreach ($employees as $employee)
+        dump ($employees);
+        foreach ($employees as $employee){
             print("<tr>"
                     . "<td>" . $count++  . "</td>"
                     . "<td>" . $employee->getName() . "</td>"
@@ -35,11 +34,11 @@ include_once "bootstrap.php";
                     . "<td>
                         <a class = \"btn-del\" href=\"?delete={$employee->getId()}\">DELETE</a>
                         <a class = \"btn-edit\" href=\"?edit={$employee->getId()}\">EDIT</a></td>"
-                . "</tr>");
+                . "</tr>");}
         }
-
+        
     //PROJECTS TABLE
-    if ($_SERVER["REQUEST_URI"] == '/projects' or $request[0] == '/projects?edit') {
+    if ($url == '/projects' or $request[0] == '/projects?edit') {
         $projects = $entityManager->getRepository('Models\Project')->findAll();
 
         foreach ($projects as $project) {
