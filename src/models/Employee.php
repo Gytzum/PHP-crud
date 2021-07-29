@@ -29,7 +29,6 @@ class Employee
     public function getName() {
         return $this->name;
     }
-
     public function setName($name) {
         $this->name = $name;
     }
@@ -43,5 +42,4 @@ class Employee
         return $this->project;
     }
 
- 
 }
