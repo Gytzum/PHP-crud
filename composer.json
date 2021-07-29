@@ -13,7 +13,7 @@
     },
     "autoload": {
         "psr-4": {
-                    "Models\\": "src/models/"
+                "Models\\": "src/models/"
         }
     },
     "require-dev": {

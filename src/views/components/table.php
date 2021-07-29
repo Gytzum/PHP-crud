@@ -20,25 +20,12 @@ include_once "bootstrap.php";
     <tbody>
     <?php
     $request = explode('=', $_SERVER['REQUEST_URI']);
+    
     //EMPLOYEES TABLE
     $count = 1;
-    $url = $_SERVER['REQUEST_URI'];
-    if ($url == '/employees' or $url == '/' or $url == '' or $request[0] == '/employees?edit' or $request[0] == '/?edit' ) {
-        $employees = $entityManager->getRepository('Models\Employee')->findAll();
-        dump ($employees);
-        foreach ($employees as $employee){
-            print("<tr>"
-                    . "<td>" . $count++  . "</td>"
-                    . "<td>" . $employee->getName() . "</td>"
-                    . "<td></td>"
-                    . "<td>
-                        <a class = \"btn-del\" href=\"?delete={$employee->getId()}\">DELETE</a>
-                        <a class = \"btn-edit\" href=\"?edit={$employee->getId()}\">EDIT</a></td>"
-                . "</tr>");}
-        }
-        
+
     //PROJECTS TABLE
-    if ($url == '/projects' or $request[0] == '/projects?edit') {
+    if ($request[0]  == '/projects' or $request[0] == '/projects?edit') {
         $projects = $entityManager->getRepository('Models\Project')->findAll();
 
         foreach ($projects as $project) {
@@ -60,6 +47,25 @@ include_once "bootstrap.php";
                 . "</tr>");
         }
     }
+
+        //Employee TABLE
+        if ($request[0] == '/employees' or $request[0] == '/employees?edit' or $request[0] == '/?edit' or $request[0]=='/' ) {
+            $employees = $entityManager->getRepository('Models\Employee')->findAll();
+    
+            foreach ($employees as $employee) {   
+                $employeeId= $employee->getId();
+                     print("<tr>"
+                        . "<td>" . $count++ . "</td>"
+                        . "<td>" . $employee->getName() . "</td>"
+                        . "<td></td>"
+                        . "<td>
+                            <a class = \"btn-del\" href=\"?delete={$employeeId}\">DELETE</a>
+                            <a class = \"btn-edit\" href=\"?edit={$employeeId}\">EDIT</a></td>"
+                    . "</tr>");        
+                }
+                
+            }
+        
     ?>
     </tbody>
 </table>

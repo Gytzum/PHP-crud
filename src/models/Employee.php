@@ -22,7 +22,7 @@ class Employee
       /**
      * Many employees have one project. This is the owning side.
      * @ORM\ManyToOne(targetEntity="Project", inversedBy="employees")
-     * @ORM\JoinColumn(name="project_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="project_id", referencedColumnName="id", onDelete="SET NULL")
      */
     private $project;
 
